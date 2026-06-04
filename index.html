@@ -24,11 +24,12 @@
     background: #fff; 
     border-radius: 12px; 
     padding: 15px; 
-    margin-bottom: 20px; 
+    margin-bottom: 20px; /* 상자 사이의 아래 간격 */
     box-shadow: 0 1px 2px rgba(0,0,0,0.1); 
+    display: block;    /* 상자가 아래로 차례대로 쌓이게 합니다 */
     position: relative;
-    display: block; 
-    height: auto;   
+    float: none;       /* 혹시 모를 정렬 버그 방지 */
+    clear: both;       /* 앞선 상자와 겹치지 않게 밀어냄 */
 }
 
 /* 기존 .content-area.collapsed를 이걸로 덮어쓰기 */
