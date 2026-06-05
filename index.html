@@ -24,19 +24,18 @@
     background: #fff; 
     border-radius: 12px; 
     padding: 15px; 
-    margin-bottom: 20px; 
+    margin-bottom: 20px; /* 개별 상자끼리 아래로 20px씩 간격을 벌려줍니다 */
     box-shadow: 0 1px 2px rgba(0,0,0,0.1); 
+    display: block;      /* 상자가 겹치지 않고 무조건 아래로 정렬되게 합니다 */
     position: relative;
-    display: block; 
-    height: auto;   
+    clear: both;         /* 주변 다른 요소와 절대 겹치지 않게 방어해 줍니다 */
 }
 
 /* 기존 .content-area.collapsed를 이걸로 덮어쓰기 */
 .content-area.collapsed { 
-    max-height: 160px; /* 120에서 160으로 늘려서 이미지 겹침 방지 */
-    overflow: hidden; 
     display: block;    
     position: relative;
+    /* 기존에 있던 max-height: 160px; 과 overflow: hidden; 을 지웠습니다! */
 }
 
     /* 댓글 */
